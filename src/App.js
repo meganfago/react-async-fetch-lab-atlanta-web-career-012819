@@ -3,7 +3,9 @@ import React, {Component} from 'react'
 class App extends Component {
   
   componentDidMount(){
-    fetch(``)
+    fetch(`http://api.open-notify.org/astros.json`)
+    .then(resp => resp.json())
+    .then(data => console.log(data))
   }
   
   
